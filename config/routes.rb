@@ -1,12 +1,14 @@
 WebTp2Alonso::Application.routes.draw do
 
   get "home/index"
+  get "user_sessions/new"
+  get "user_sessions/destroy"
 
   # permite crear una sesión e interactua con el controlador para crearla
-  match 'login' => 'user_sessions#new', :as => :login    
+  match 'login'  => 'user_sessions#new', :as => :login    
 
   #También interactúa con el controlador para cerrar la sesión
-  match 'logout' => 'user_sessions#destroy', :as => :logout
+  match 'ogout' => 'user_sessions#destroy', :as => :logout
 
 # son los recursos que se utilizan para el inicio de sesión
   resources :users
