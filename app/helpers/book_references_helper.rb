@@ -1,0 +1,2 @@
+module BookReferencesHelper
+end

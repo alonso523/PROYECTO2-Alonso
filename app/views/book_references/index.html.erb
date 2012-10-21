@@ -1,0 +1,33 @@
+<h1>Lista de referencias de libros</h1>
+
+<table>
+  <tr>
+    <th>Autor</th>
+    <th>Titulo</th>
+    <th>Anno</th>
+    <th>Ciudad</th>
+    <th>Editorial</th>
+    <th>Paginas</th>
+    <th>Bienvenido: <%= @user.username%></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @book_references.each do |book_reference| %>
+  <tr>
+    <td><%= book_reference.autor %></td>
+    <td><%= book_reference.titulo %></td>
+    <td><%= book_reference.anno %></td>
+    <td><%= book_reference.ciudad %></td>
+    <td><%= book_reference.editorial %></td>
+    <td><%= book_reference.paginas %></td>
+    <td><%= link_to 'Show', book_reference %></td>
+    <td><%= link_to 'Edit', edit_book_reference_path(book_reference) %></td>
+    <td><%= link_to 'Destroy', book_reference, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Book reference', new_book_reference_path %>

@@ -1,5 +1,7 @@
 WebTp2Alonso::Application.routes.draw do
 
+  resources :book_references
+
   get "home/index"
   get "user_sessions/new"
   get "user_sessions/destroy"
@@ -13,6 +15,7 @@ WebTp2Alonso::Application.routes.draw do
 # son los recursos que se utilizan para el inicio de sesión
   resources :users
   resources :user_sessions
+  resources :book_references
 
   root :to => 'home#index'
 

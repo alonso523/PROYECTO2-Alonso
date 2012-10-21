@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>User:</b>
+  <%= @book_reference.user %>
+</p>
+
+<p>
+  <b>Autor:</b>
+  <%= @book_reference.autor %>
+</p>
+
+<p>
+  <b>Titulo:</b>
+  <%= @book_reference.titulo %>
+</p>
+
+<p>
+  <b>Anno:</b>
+  <%= @book_reference.anno %>
+</p>
+
+<p>
+  <b>Ciudad:</b>
+  <%= @book_reference.ciudad %>
+</p>
+
+<p>
+  <b>Editorial:</b>
+  <%= @book_reference.editorial %>
+</p>
+
+<p>
+  <b>Paginas:</b>
+  <%= @book_reference.paginas %>
+</p>
+
+
+<%= link_to 'Edit', edit_book_reference_path(@book_reference) %> |
+<%= link_to 'Back', book_references_path %>
