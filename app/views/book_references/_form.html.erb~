@@ -11,8 +11,8 @@
     </div>
   <% end %>
   <div class="field">
-    <%= f.label :user, 'Usuario:' %>
-    <%= @user.username %>
+    <%f.label :user, 'Usuario:' %>
+    <% @book_reference.user_id %>
   </div>
   <div class="field">
     <%= f.label :autor %><br />

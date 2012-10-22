@@ -2,7 +2,6 @@
 
 <table>
   <tr>
-    <th>User</th>
     <th>Autor</th>
     <th>Titulo</th>
     <th>Anno</th>
@@ -22,9 +21,9 @@
     <td><%= book_reference.ciudad %></td>
     <td><%= book_reference.editorial %></td>
     <td><%= book_reference.paginas %></td>
-    <td><%= link_to 'Show', book_reference %></td>
-    <td><%= link_to 'Edit', edit_book_reference_path(book_reference) %></td>
-    <td><%= link_to 'Destroy', book_reference, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= link_to 'Mostrar', book_reference %></td>
+    <td><%= link_to 'Editar', edit_book_reference_path(book_reference) %></td>
+    <td><%= link_to 'Eliminar', book_reference, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
 <% end %>
 </table>

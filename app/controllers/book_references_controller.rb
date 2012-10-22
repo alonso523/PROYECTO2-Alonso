@@ -2,8 +2,9 @@ class BookReferencesController < ApplicationController
   # GET /book_references
   # GET /book_references.json
   def index
-    @book_references = BookReference.all
-    @user = current_user		#usuario actual
+    @user = current_user	#usuario actual
+    @userid = @user.id
+    @book_references = BookReference.where(:user_id => @userid)
 
     respond_to do |format|
       format.html # index.html.erb
@@ -42,6 +43,7 @@ class BookReferencesController < ApplicationController
   # POST /book_references.json
   def create
     @book_reference = BookReference.new(params[:book_reference])
+    @book_reference.user_id = current_user.id
     respond_to do |format|
       if @book_reference.save
         format.html { redirect_to @book_reference, notice: 'Book reference was successfully created.' }
