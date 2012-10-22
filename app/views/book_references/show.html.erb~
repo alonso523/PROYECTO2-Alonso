@@ -1,11 +1,6 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>User:</b>
-  <%= @book_reference.user %>
-</p>
-
-<p>
   <b>Autor:</b>
   <%= @book_reference.autor %>
 </p>
@@ -33,6 +28,11 @@
 <p>
   <b>Paginas:</b>
   <%= @book_reference.paginas %>
+</p>
+
+<p>
+  <b>Formato APA:</b>
+  <%= @book_reference.autor%>.(<%= @book_reference.anno %>.).<%= @book_reference.titulo%>.<%= @book_reference.cuidad%>:<%= @book_reference.editorial%>
 </p>
 
 

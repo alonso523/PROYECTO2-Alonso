@@ -1,14 +1,16 @@
+ <h2>Bienvenido: <%= @user.username%></h2>
+
 <h1>Lista de referencias de libros</h1>
 
 <table>
   <tr>
     <th>Autor</th>
     <th>Titulo</th>
-    <th>Anno</th>
+    <th>Año</th>
     <th>Ciudad</th>
     <th>Editorial</th>
     <th>Paginas</th>
-    <th>Bienvenido: <%= @user.username%></th>
+    <th>Formato APA</th>
     <th></th>
     <th></th>
   </tr>

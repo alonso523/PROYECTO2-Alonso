@@ -3,7 +3,7 @@ class BookReferencesController < ApplicationController
   # GET /book_references.json
   def index
     @user = current_user	#usuario actual
-    @userid = @user.id
+    @userid = @user.id		#obtiene el identificador del usuario.
     @book_references = BookReference.where(:user_id => @userid)
 
     respond_to do |format|
@@ -46,7 +46,7 @@ class BookReferencesController < ApplicationController
     @book_reference.user_id = current_user.id
     respond_to do |format|
       if @book_reference.save
-        format.html { redirect_to @book_reference, notice: 'Book reference was successfully created.' }
+        format.html { redirect_to @book_reference, notice: 'La referencia fue exitosamente creada.' }
         format.json { render json: @book_reference, status: :created, location: @book_reference }
       else
         format.html { render action: "new" }
@@ -62,7 +62,7 @@ class BookReferencesController < ApplicationController
 
     respond_to do |format|
       if @book_reference.update_attributes(params[:book_reference])
-        format.html { redirect_to @book_reference, notice: 'Book reference was successfully updated.' }
+        format.html { redirect_to @book_reference, notice: 'La referencia fue actualizada exitosamente.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }

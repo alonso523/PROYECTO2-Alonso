@@ -16,27 +16,27 @@
   </div>
   <div class="field">
     <%= f.label :autor %><br />
-    <%= f.text_field :autor %>
+    <%= f.text_field :autor, :format => {:with => "/w"} %>
   </div>
   <div class="field">
     <%= f.label :titulo %><br />
-    <%= f.text_field :titulo %>
+    <%= f.text_field :titulo, :format => {:with => "/w"} %>
   </div>
   <div class="field">
     <%= f.label :anno, 'Año' %><br />
-    <%= f.text_field :anno %>
+    <%= f.text_field :anno, :format => {:with => "/d"} %>
   </div>
   <div class="field">
     <%= f.label :ciudad %><br />
-    <%= f.text_field :ciudad %>
+    <%= f.text_field :ciudad, :format => {:with => "/w"} %>
   </div>
   <div class="field">
     <%= f.label :editorial %><br />
-    <%= f.text_field :editorial %>
+    <%= f.text_field :editorial, :format => {:with => "/w"} %>
   </div>
   <div class="field">
     <%= f.label :paginas %><br />
-    <%= f.text_field :paginas %>
+    <%= f.text_field :paginas, :format => {:with => "/^[0-9]{0,4}-[0-9]{0,4}$/"}%>
   </div>
   <div class="actions">
     <%= f.submit %>

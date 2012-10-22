@@ -17,7 +17,7 @@
   </div>
   <div class="field">
     <%= f.label :email %><br />
-    <%= f.text_field :email %>
+    <%= f.text_field :email, :format => {:with => "/[\w-\.]{3,}@([\w-]{2,}\.)*([\w-]{2,}\.)[\w-]{2,4}/"}%>
   </div>
   <div class="field">
     <%= f.label :password %><br />

@@ -30,6 +30,11 @@
   <%= @book_reference.paginas %>
 </p>
 
+<p>
+  <b>Formato APA:</b>
+  <%= @book_reference.autor%>.(<%= @book_reference.anno %>.).<%= @book_reference.titulo%>.<%= @book_reference.ciudad%>:<%= @book_reference.editorial%>
+</p>
+
 
 <%= link_to 'Edit', edit_book_reference_path(@book_reference) %> |
 <%= link_to 'Back', book_references_path %>
