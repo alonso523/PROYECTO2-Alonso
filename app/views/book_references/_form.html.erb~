@@ -24,7 +24,7 @@
   </div>
   <div class="field">
     <%= f.label :anno, 'Año' %><br />
-    <%= f.text_field :anno, :format => {:with => "/d"}, :presence true %>
+    <%= f.text_field :anno, :pattern => "/[0-9]{4}/"%>
   </div>
   <div class="field">
     <%= f.label :ciudad %><br />

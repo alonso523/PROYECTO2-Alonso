@@ -1,4 +1,4 @@
 class BookReference < ActiveRecord::Base
-  belongs_to :user
   attr_accessible :anno, :autor, :ciudad, :editorial, :paginas, :titulo
+  belongs_to :user
 end
