@@ -7,6 +7,8 @@ gem 'rails', '3.2.8'
 
 gem 'pg'
 
+gem 'prawn'
+
 #################### Añadir gema de autenticación authlogic ##########################
 gem 'authlogic'
 gem 'rails3-generators' 

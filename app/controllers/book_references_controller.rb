@@ -21,6 +21,13 @@ class BookReferencesController < ApplicationController
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @book_reference }
+
+      format.pdf do
+        pdf = BookReferencePdf.new(@book_reference, view_context)
+        send_data pdf.render, filename:
+        "book_reference_#{@book_reference.created_at.strftime("%d/%m/%Y")}.pdf",
+        type: "application/pdf"
+     end
     end
   end
 

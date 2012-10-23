@@ -48,7 +48,7 @@ class WebReferencesController < ApplicationController
 
     respond_to do |format|
       if @web_reference.save
-        format.html { redirect_to @web_reference, notice: 'Web reference was successfully created.' }
+        format.html { redirect_to @web_reference, notice: 'Referencia web creada exitosamente.' }
         format.json { render json: @web_reference, status: :created, location: @web_reference }
       else
         format.html { render action: "new" }
