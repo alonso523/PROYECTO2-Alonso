@@ -38,4 +38,4 @@
 
 <br />
 
-<%= link_to 'New Web reference', new_web_reference_path %>
+<%= link_to 'Nueva referencia web', new_web_reference_path %>

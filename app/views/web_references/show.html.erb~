@@ -52,4 +52,4 @@
 </p>
 
 <%= link_to 'Edit', edit_web_reference_path(@web_reference) %> |
-<%= link_to 'Back', book_references_path %>
+<%= link_to 'Back', web_references_path %>

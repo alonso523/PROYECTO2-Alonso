@@ -2,6 +2,8 @@
 
 <h1>Lista de referencias</h1>
 
+<h1>Lista de referencias de libros</h1>
+
 <table>
   <tr>
     <th>Autor</th>
@@ -28,7 +30,44 @@
   </tr>
 <% end %>
 </table>
-<br />
-
 <%= link_to 'Agregar nueva referencia de libro', new_book_reference_path %>
-<%= link_to 'Ver referencias web', web_references_path %>
+
+
+<h1>Referencias web</h1>
+
+<table>
+  <tr>
+    <th>Autor</th>
+    <th>Sitio</th>
+    <th>Año</th>
+    <th>Mes</th>
+    <th>Dia</th>
+    <th>Año consulta</th>
+    <th>Mes consulta</th>
+    <th>Dia consulta</th>
+    <th>Dirección Url</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @web_references.each do |web_reference| %>
+  <tr>
+    <td><%= web_reference.autor %></td>
+    <td><%= web_reference.sitio %></td>
+    <td><%= web_reference.anno %></td>
+    <td><%= web_reference.mes %></td>
+    <td><%= web_reference.dia %></td>
+    <td><%= web_reference.annoconsulta %></td>
+    <td><%= web_reference.mesconsulta %></td>
+    <td><%= web_reference.diaconsulta %></td>
+    <td><%= web_reference.url %></td>
+    <td><%= link_to 'Mostrar', web_reference %></td>
+    <td><%= link_to 'Editar', edit_web_reference_path(web_reference) %></td>
+    <td><%= link_to 'Eliminar', web_reference, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+<%= link_to 'Agregar referencias web', new_web_reference_path %>
