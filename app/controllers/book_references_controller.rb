@@ -22,9 +22,11 @@ class BookReferencesController < ApplicationController
       format.html # show.html.erb
       format.json { render json: @book_reference }
 
+    ##Usado para generar el archivo pdf
       format.pdf do
-        pdf = BookReferencePdf.new(@book_reference, view_context)
-        send_data pdf.render, filename:
+        pdf = BookReferencePdf.new(@book_reference, view_context)  ##HAce referencia al modelo para generar el pdf
+#Crea el archivo pdf y lo descarga directamente
+        send_data pdf.render, filename:      
         "book_reference_#{@book_reference.created_at.strftime("%d/%m/%Y")}.pdf",
         type: "application/pdf"
      end

@@ -1,0 +1,10 @@
+#clase para poder desplegar en pdf crea el archivo pdf
+class WebReferencePdf < Prawn::Document
+ 
+  def initialize(web_reference, view)
+  super()
+  @web_reference = web_reference
+  @view = view
+  text "Formato APA:  #{@web_reference.autor}.(#{@web_reference.dia} del #{@web_reference.mes} de #{@web_reference.anno}).#{@web_reference.titulo}.#{@web_reference.ciudad}.#{@web_reference.editorial}"
+end
+end

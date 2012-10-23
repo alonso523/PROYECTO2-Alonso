@@ -24,7 +24,7 @@
     <td><%= book_reference.ciudad %></td>
     <td><%= book_reference.editorial %></td>
     <td><%= book_reference.paginas %></td>
-    <td><%= link_to "PDF", book_reference_path(book_reference.id, :format => "pdf") %></td>
+    <td><%= link_to "pdf", book_reference_path(book_reference.id, :format => "pdf") %></td>
     <td><%= link_to 'Mostrar', book_reference %></td>
     <td><%= link_to 'Editar', edit_book_reference_path(book_reference) %></td>
     <td><%= link_to 'Eliminar', book_reference, method: :delete, data: { confirm: 'Está seguro?' } %></td>
@@ -63,6 +63,7 @@
     <td><%= web_reference.mesconsulta %></td>
     <td><%= web_reference.diaconsulta %></td>
     <td><%= web_reference.url %></td>
+    <td><%= link_to "pdf", book_reference_path(book_reference.id, :format => "pdf") %></td>
     <td><%= link_to 'Mostrar', web_reference %></td>
     <td><%= link_to 'Editar', edit_web_reference_path(web_reference) %></td>
     <td><%= link_to 'Eliminar', web_reference, method: :delete, data: { confirm: 'Are you sure?' } %></td>

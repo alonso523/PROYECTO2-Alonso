@@ -63,6 +63,7 @@
     <td><%= web_reference.mesconsulta %></td>
     <td><%= web_reference.diaconsulta %></td>
     <td><%= web_reference.url %></td>
+    <td><%= link_to "pdf", web_reference_path(web_reference.id, :format => "pdf") %></td>
     <td><%= link_to 'Mostrar', web_reference %></td>
     <td><%= link_to 'Editar', edit_web_reference_path(web_reference) %></td>
     <td><%= link_to 'Eliminar', web_reference, method: :delete, data: { confirm: 'Are you sure?' } %></td>
