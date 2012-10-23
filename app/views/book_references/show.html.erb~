@@ -32,7 +32,7 @@
 
 <p>
   <b>Formato APA:</b>
-  <%= @book_reference.autor%>.(<%= @book_reference.anno %>.).<%= @book_reference.titulo%>.<%= @book_reference.cuidad%>:<%= @book_reference.editorial%>
+  <%= @book_reference.autor%>.(<%= @book_reference.anno %>.).<%= @book_reference.titulo%>.<%= @book_reference.ciudad%>:<%= @book_reference.editorial%>
 </p>
 
 

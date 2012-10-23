@@ -24,11 +24,11 @@
     <td><%= book_reference.paginas %></td>
     <td><%= link_to 'Mostrar', book_reference %></td>
     <td><%= link_to 'Editar', edit_book_reference_path(book_reference) %></td>
-    <td><%= link_to 'Eliminar', book_reference, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= link_to 'Eliminar', book_reference, method: :delete, data: { confirm: 'Está seguro?' } %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Book reference', new_book_reference_path %>
+<%= link_to 'Agregar nueva referencia de libro', new_book_reference_path %>

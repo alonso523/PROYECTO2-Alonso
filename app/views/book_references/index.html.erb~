@@ -10,7 +10,6 @@
     <th>Ciudad</th>
     <th>Editorial</th>
     <th>Paginas</th>
-    <th>Formato APA</th>
     <th></th>
     <th></th>
   </tr>
@@ -32,4 +31,4 @@
 
 <br />
 
-<%= link_to 'New Book reference', new_book_reference_path %>
+<%= link_to 'Agregar nueva referencia de libro', new_book_reference_path %>
