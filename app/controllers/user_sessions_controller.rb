@@ -38,7 +38,7 @@ class UserSessionsController < ApplicationController
     @user_session.destroy
 
     respond_to do |format|
-      format.html { redirect_to(:users, :notice => 'Sesion cerrada') }
+      format.html { redirect_to(:login, :notice => 'Sesion cerrada') }
       format.xml  { head :ok }
     end
   end

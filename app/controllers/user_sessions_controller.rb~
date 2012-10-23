@@ -17,7 +17,6 @@ class UserSessionsController < ApplicationController
   # POST /user_sessions.xml
   def create
     @user_session = UserSession.new(params[:user_session])
-    @userid = User.find(params[:id])
 
     respond_to do |format|
       if @user_session.save
