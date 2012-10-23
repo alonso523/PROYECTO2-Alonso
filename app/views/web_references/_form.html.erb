@@ -1,0 +1,57 @@
+<%= form_for(@web_reference) do |f| %>
+  <% if @web_reference.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@web_reference.errors.count, "error") %> Referencia web no guardada:</h2>
+
+      <ul>
+      <% @web_reference.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%f.label :user, 'Usuario:' %>
+    <% @web_reference.user_id %>
+  </div>
+  <div class="field">
+    <%= f.label :autor, 'Autor' %><br />
+    <%= f.text_field :autor %>
+  </div>
+  <div class="field">
+    <%= f.label :sitio, 'Nombre del sitio' %><br />
+    <%= f.text_field :sitio %>
+  </div>
+  <div class="field">
+    <%= f.label :anno, 'Año' %><br />
+    <%= f.text_field :anno %>
+  </div>
+  <div class="field">
+    <%= f.label :mes, 'Mes' %><br />
+    <%= f.text_field :mes %>
+  </div>
+  <div class="field">
+    <%= f.label :dia, 'Día' %><br />
+    <%= f.text_field :dia %>
+  </div>
+  <div class="field">
+    <%= f.label :annoconsulta, 'Año consulta' %><br />
+    <%= f.text_field :annoconsulta %>
+  </div>
+  <div class="field">
+    <%= f.label :mesconsulta, 'Mes consulta' %><br />
+    <%= f.text_field :mesconsulta %>
+  </div>
+  <div class="field">
+    <%= f.label :diaconsulta, 'Día consulta' %><br />
+    <%= f.text_field :diaconsulta %>
+  </div>
+  <div class="field">
+    <%= f.label :url, 'Dirección url' %><br />
+    <%= f.text_field :url %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

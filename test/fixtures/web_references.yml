@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  user: 
+  autor: MyString
+  sitio: MyString
+  anno: 1
+  mes: 1
+  dia: 1
+  annoconsulta: 1
+  mesconsulta: 1
+  diaconsulta: 1
+  url: MyString
+
+two:
+  user: 
+  autor: MyString
+  sitio: MyString
+  anno: 1
+  mes: 1
+  dia: 1
+  annoconsulta: 1
+  mesconsulta: 1
+  diaconsulta: 1
+  url: MyString

@@ -1,5 +1,7 @@
 WebTp2Alonso::Application.routes.draw do
 
+  resources :web_references
+
   resources :book_references
 
   get "home/index"

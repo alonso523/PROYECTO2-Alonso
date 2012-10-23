@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121021043044) do
+ActiveRecord::Schema.define(:version => 20121023005458) do
 
   create_table "book_references", :force => true do |t|
     t.integer  "user_id"
@@ -41,5 +41,22 @@ ActiveRecord::Schema.define(:version => 20121021043044) do
     t.datetime "created_at",        :null => false
     t.datetime "updated_at",        :null => false
   end
+
+  create_table "web_references", :force => true do |t|
+    t.integer  "user_id"
+    t.string   "autor"
+    t.string   "sitio"
+    t.integer  "anno"
+    t.integer  "mes"
+    t.integer  "dia"
+    t.integer  "annoconsulta"
+    t.integer  "mesconsulta"
+    t.integer  "diaconsulta"
+    t.string   "url"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+  end
+
+  add_index "web_references", ["user_id"], :name => "index_web_references_on_user_id"
 
 end

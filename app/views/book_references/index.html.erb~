@@ -1,6 +1,6 @@
- <h2>Bienvenido: <%= @user.username%></h2>
+ <h2>Bienvenid@: <%= @user.username%></h2>
 
-<h1>Lista de referencias de libros</h1>
+<h1>Lista de referencias</h1>
 
 <table>
   <tr>
@@ -28,7 +28,7 @@
   </tr>
 <% end %>
 </table>
-
 <br />
 
 <%= link_to 'Agregar nueva referencia de libro', new_book_reference_path %>
+<%= link_to 'Ver referencias web', web_references_path %>

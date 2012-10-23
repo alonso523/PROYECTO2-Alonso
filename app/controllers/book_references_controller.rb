@@ -5,6 +5,7 @@ class BookReferencesController < ApplicationController
     @user = current_user	#usuario actual
     @userid = @user.id		#obtiene el identificador del usuario.
     @book_references = BookReference.where(:user_id => @userid)
+    @web_references = WebReference.where(:user_id => @userid)
 
     respond_to do |format|
       format.html # index.html.erb
